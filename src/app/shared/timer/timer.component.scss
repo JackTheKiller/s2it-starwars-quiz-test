@@ -1,0 +1,36 @@
+:host {
+    display: inline-flex;
+    vertical-align: middle;
+    align-items: center;
+
+    &.danger {
+        color: #F44336;
+        font-weight: bold;
+
+        .clock {
+            animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both infinite;
+            transform: translate3d(0, 0, 0);
+            backface-visibility: hidden;
+            perspective: 1000px;
+        }
+    }
+}
+
+@keyframes shake {
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    20%,
+    40%,
+    60%,
+    80%,
+    100% {
+        transform: translate3d(-4px, 0, 0);
+    }
+}

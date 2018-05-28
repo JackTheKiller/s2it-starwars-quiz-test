@@ -1,0 +1,29 @@
+<h1>High Scores
+  <br>
+  <br>TOP 10</h1>
+
+<div class="scoreContainer">
+  <h3 *ngIf="result.length <= 0">nothing yet...</h3>
+  <table *ngIf="result.length > 0">
+    <thead>
+      <tr>
+        <td>Name</td>
+        <td>Correct
+          <br>Guesses</td>
+        <td>Score</td>
+      </tr>
+    </thead>
+    <tbody dragScroll>
+      <tr *ngFor="let r of result">
+        <td>{{ r.name }}</td>
+        <td>{{ r.correctGuesses }}</td>
+        <td>{{ r.score }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="actions">
+  <button routerLink="/rules">try again</button>
+  <button routerLink="/">home</button>
+</div>

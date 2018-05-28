@@ -1,0 +1,15 @@
+@import 'src/global-vars.scss';
+
+:host {
+    padding: 50px;
+    overflow: hidden;
+}
+
+#background {
+    color: $star-wars-yellow;
+    opacity: .2;
+    position: absolute;
+    width: 950px;
+    height: 1000px;
+    transform: rotate(-30deg) translate(-10%, -40%);
+}

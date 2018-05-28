@@ -1,0 +1,49 @@
+:host,
+.scoreContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+    line-height: 80%;
+}
+
+.scoreContainer {
+    width: 280px;
+    min-height: 280px;
+
+    table {
+        width: 100%;
+
+        tr td {
+            width: 22px;
+            padding: 3px;
+            text-align: center;
+
+            &:first-child {
+                width: auto;
+                padding-left: 10px;
+                text-align: left;
+            }
+        }
+
+        tbody tr:nth-child(odd) td {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    }
+}
+
+.actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 20px;
+
+    button {
+        width: 100px;
+    }
+}

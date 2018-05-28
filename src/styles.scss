@@ -1,1 +1,123 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'src/global-vars.scss';
+@import url('https://fonts.googleapis.com/css?family=Lato|Poller+One|News+Cycle|Material+Icons');
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background: radial-gradient(ellipse at bottom, rgb(31, 31, 31) 0%, rgb(0, 0, 0) 100%);
+    overflow: hidden;
+
+    font-family: 'Lato', sans-serif;
+    color: #ff6;
+}
+
+* {
+    transition: all 0.5s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Poller One', cursive;
+    color: $star-wars-yellow;
+}
+
+a,
+a:active,
+a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input {
+    cursor: pointer;
+    $text-color: white;
+    color: $text-color;
+    background-color: #1a1a1a;
+    border: 3px solid $text-color;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 0 6px 0 inset $text-color,
+    0 0 6px 0 $text-color;
+    outline: none;
+
+    &:not(.inactive) {
+        &:hover,
+        &:focus {
+            box-shadow: 0 0 17px 0 inset white, 0 0 17px 0 white;
+        }
+    }
+
+    &:focus::placeholder {
+        color: #1a1a1a;
+    }
+
+    &::placeholder {
+        color: $text-color;
+    }
+
+    &.changed {
+        $text-color: #fff04b;
+        color: $text-color;
+        box-shadow: 0 0 6px 0 inset $text-color,
+        0 0 6px 0 $text-color;
+        border-color: $text-color;
+    }
+
+    &.inactive {
+        $inactive-color: #999;
+        color: $inactive-color;
+        border-color: $inactive-color;
+        box-shadow: none;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffffb9;
+    border: 7px none #ffffff;
+    border-radius: 54px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ffff00;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: #ffbd42;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+    border: 16px none #ffffff;
+    border-radius: 0px;
+}
+
+::-webkit-scrollbar-track:hover {
+    background: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-track:active {
+    background: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+}

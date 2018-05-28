@@ -1,0 +1,61 @@
+@import 'src/global-vars.scss';
+
+h1 {
+    padding-left: 30px;
+}
+
+app-timer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-bottom: 2px solid $star-wars-yellow;
+    border-left: 2px solid $star-wars-yellow;
+    border-bottom-left-radius: 10px;
+    color: $star-wars-yellow;
+    padding: 10px 15px;
+    background-color: black;
+    z-index: 9;
+}
+
+.container {
+    min-width: 290px;
+    width: 90vw;
+    max-width: 900px;
+    max-height: 400px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden !important;
+
+    app-character-card {
+        min-width: 300px;
+    }
+}
+
+.arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 25px;
+    background-color: rgba(0, 0, 0, 1);
+    z-index: 8;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    opacity: 0.4;
+
+    &.right {
+        right: 0;
+    }
+
+    &.left {
+        left: 0;
+    }
+
+    &:hover {
+        opacity: 1;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+}

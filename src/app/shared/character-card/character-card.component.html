@@ -1,0 +1,63 @@
+<div class="container">
+  <img *ngIf="image" [src]="image.url">
+
+  <div class="actions">
+  <input #guessElement type="text"
+    placeholder="guess ({{ charData.points }} points)"
+    [ngClass]="{'changed': guessElement.value !== ''}"
+    (keydown.enter)="onEnterPressed(guessElement.value)"
+    [(ngModel)]="charData.guess">
+  <button #infoElement (click)="toggleInfo(infoElement, modalElement)">information (-{{ potentialPoints / 2 }} points)</button>
+  </div>
+</div>
+
+<table #modalElement class="information" (click)="toggleInfo(infoElement, modalElement)">
+  <tr>
+    <td>species</td>
+    <td>
+      <ng-template ngFor let-species [ngForOf]="charData.species" let-last="last">
+        {{ species }}
+        <br *ngIf="!last">
+      </ng-template>
+    </td>
+  </tr>
+  <tr>
+    <td>height</td>
+    <td>{{ charData.height }}</td>
+  </tr>
+  <tr>
+    <td>hair_color</td>
+    <td>{{ charData.hair_color }}</td>
+  </tr>
+  <tr>
+    <td>homeworld</td>
+    <td>{{ charData.homeworld }}</td>
+  </tr>
+  <tr>
+    <td>films</td>
+    <td>
+      <ng-template ngFor let-film [ngForOf]="charData.films" let-last="last">
+        {{ film }}
+        <br *ngIf="!last">
+      </ng-template>
+    </td>
+  </tr>
+  <tr>
+    <td>vehicles</td>
+    <td>
+      <ng-template ngFor let-vehicle [ngForOf]="charData.vehicles" let-last="last">
+        {{ vehicle }}
+        <br *ngIf="!last">
+      </ng-template>
+    </td>
+  </tr>
+  <tr>
+    <td>starships</td>
+    <td>
+      <ng-template ngFor let-starship [ngForOf]="charData.starships" let-last="last">
+        {{ starship }}
+        <br *ngIf="!last">
+      </ng-template>
+    </td>
+  </tr>
+</table>

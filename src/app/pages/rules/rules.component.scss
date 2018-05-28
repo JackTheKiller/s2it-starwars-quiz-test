@@ -1,0 +1,144 @@
+@import 'src/global-vars.scss';
+
+:host {
+    min-width: 290px;
+    width: 90vw;
+    max-width: 900px;
+}
+
+#skipRules {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-bottom: 2px solid $star-wars-yellow;
+    border-left: 2px solid $star-wars-yellow;
+    border-bottom-left-radius: 10px;
+    color: $star-wars-yellow;
+    padding: 10px 15px;
+    z-index: 999;
+    opacity: 0.4;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+// adapted from https://codepen.io/TimPietrusky/pen/eHGfj
+.starwars {
+    font: 700 1em "News Cycle", sans-serif;
+    letter-spacing: .15em;
+    overflow: hidden;
+    margin: 0;
+    width: 850px;
+
+    section {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        z-index: 1;
+    }
+
+    .intro {
+        $intro-width: 15em;
+        width: $intro-width;
+        margin: 0 0 0 (- $intro-width / 2);
+        font-size: 200%;
+        font-weight: 400;
+        color: rgb(75, 213, 238);
+        opacity: 0;
+        animation: intro 6s ease-out 1s;
+    }
+
+    .logo {
+        opacity: 0;
+        animation: logo 9s ease-out 9s;
+
+        img {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    .titles {
+        $titles-width: 14.65em;
+        width: $titles-width;
+        margin: 0 0 0 (- $titles-width / 2);
+        top: auto;
+        bottom: 0;
+        height: 50em;
+        font-size: 350%;
+        text-align: justify;
+        overflow: hidden;
+        transform-origin: 50% 100%;
+        transform: perspective(300px) rotateX(25deg);
+
+        >div {
+            position: absolute;
+            top: 100%;
+            animation: titles 81s linear 13s;
+
+            >p {
+                margin: 1.35em 0 1.85em 0;
+                line-height: 1.35em;
+                backface-visibility: hidden;
+            }
+        }
+    }
+}
+
+@keyframes intro {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes logo {
+    0% {
+        $logo-width: 18em;
+        width: $logo-width;
+        margin: (- $logo-width / 2) 0 0 (- $logo-width / 2);
+
+        transform: scale(2.75);
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+
+        $logo-width: 18em;
+        width: $logo-width;
+        margin: (- $logo-width / 2) 0 0 (- $logo-width / 2);
+    }
+    100% {
+        transform: scale(.1);
+        opacity: 0;
+
+        $logo-width: 18em;
+        width: $logo-width;
+        margin: (- $logo-width / 2) 0 0 (- $logo-width / 2);
+    }
+}
+
+@keyframes titles {
+    0% {
+        top: 100%;
+        opacity: 1;
+    }
+    95% {
+        opacity: 1;
+    }
+    100% {
+        top: 20%;
+        opacity: 0;
+    }
+}

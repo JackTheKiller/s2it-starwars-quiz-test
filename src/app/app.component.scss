@@ -1,0 +1,35 @@
+@import 'src/global-vars.scss';
+@import 'src/app/parallaxStars.scss';
+
+#mainContainer {
+    position: absolute;
+    display: flex;
+
+    min-width: 300px;
+    min-height: 500px;
+    max-width: 960px;
+    max-height: 600px;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 10px double $star-wars-yellow;
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    transition: all 0.3s;
+}
+
+app-db-loader {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-top: 2px solid $star-wars-yellow;
+    border-left: 2px solid $star-wars-yellow;
+    border-top-left-radius: 10px;
+    color: $star-wars-yellow;
+    padding: 10px 15px;
+}

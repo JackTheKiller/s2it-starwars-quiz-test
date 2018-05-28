@@ -1,0 +1,44 @@
+<article class="starwars">
+  <audio #themeMusic preload="auto" autoplay>
+    <source src="../../../assets/Star_Wars_original_opening_crawl_1977.mp3" type="audio/mpeg" />
+  </audio>
+
+  <div class="animation">
+
+    <section class="intro">
+      A long time ago, in a galaxy far,
+      <br> far away....
+    </section>
+
+    <section class="titles">
+      <div>
+        <p>
+          The rules are simple: you must name the characters (from all movies) correctly. Don't worry about capitalization.
+        </p>
+
+        <p>
+          You will not be penalised for typos or being out right wrong, but you will not get any points for those either.
+        </p>
+
+        <p>
+          Every time you answer it right you get 10 points, but if you make use of aditional information the current character will
+          only get you half the points (5 points).
+        </p>
+
+        <p>
+          You have 2 minutes to get as many characters as you can. The current total of characters in our database is {{ totalCharacters }}.
+        </p>
+
+        <p>
+          Good lucky and may the force be with you!
+        </p>
+      </div>
+    </section>
+
+    <section class="logo">
+      <img id="logo" src="../../../assets/Star_Wars_Logo.svg" alt="Star Wars Logo">
+    </section>
+  </div>
+</article>
+
+<a id="skipRules" routerLink="/quiz">skip rules</a>

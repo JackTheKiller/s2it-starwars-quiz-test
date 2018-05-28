@@ -1,0 +1,14 @@
+<h1>Quiz!</h1>
+
+<app-timer [minutes]="2" [seconds]="1" (timesUp)="finish()"></app-timer>
+
+<span (click)="moveLeft()" class="arrow left">
+    <i *ngFor="let i of arrows" class="material-icons">keyboard_arrow_left</i>
+</span>
+<span (click)="moveRight()" class="arrow right">
+    <i *ngFor="let i of arrows" class="material-icons">keyboard_arrow_right</i>
+</span>
+
+<div #nav class="container" dragScroll [scrollbar-hidden]="true" [drag-scroll-y-disabled]="true">
+    <app-character-card *ngFor="let people of characters; let i = index" [(charData)]="characters[i]" (enterPressed)="moveRight()"></app-character-card>
+</div>

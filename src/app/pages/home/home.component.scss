@@ -1,0 +1,47 @@
+@import 'src/global-vars.scss';
+
+#logo {
+    width: 100%;
+}
+
+h1 {
+    width: 100%;
+    text-align: right;
+    font-size: 400%;
+    margin: -10px 0 0 0;
+    background-color: $star-wars-yellow;
+    color: black;
+    position: relative;
+}
+
+p {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+
+    font-size: 400%;
+    text-align: center;
+    margin: 10px 0;
+
+    a {
+        display: inline-block;
+        position: relative;
+        color: black;
+        text-shadow: 0 0 3px $star-wars-yellow, 0 0 3px $star-wars-yellow, 0 0 3px $star-wars-yellow, 0 0 3px $star-wars-yellow, 0 0 3px $star-wars-yellow;
+
+        &:hover {
+            text-shadow: none;
+            color: $star-wars-yellow;
+        }
+
+        &:last-child {
+            line-height: 80%;
+        }
+
+        &.hidden {
+            display: none;
+        }
+    }
+}

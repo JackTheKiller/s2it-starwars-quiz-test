@@ -1,0 +1,64 @@
+@import 'src/global-vars.scss';
+
+:host {
+    position: relative;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    height: 100%;
+}
+
+img {
+    max-width: 270px;
+    max-height: 270px;
+
+    border: 3px solid $star-wars-yellow;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 20px 40px 0 40px;
+    justify-content: flex-end;
+}
+
+.information {
+    cursor: pointer;
+    position: absolute;
+    width: 290px;
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 400px;
+    top: 0;
+
+    opacity: 0;
+    pointer-events: none;
+
+    tr td {
+        vertical-align: top;
+    }
+
+    tr td:first-child {
+        border-right: 1px solid $star-wars-yellow;
+        text-align: right;
+    }
+
+    tr:not(:last-child) td {
+        border-bottom: 1px solid $star-wars-yellow;
+    }
+
+    &.show {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+input:first-child {
+    margin-bottom: 20px;
+}

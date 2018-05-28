@@ -10,6 +10,8 @@
 
 Developed using [Visual Studio Code](https://code.visualstudio.com/).
 
+Sound copyright by The Walt Disney Company.
+
 ## Known Issues
 
 * the image search in use is the Google Custom Search API and after one or two players access the quiz it will use all the free requests from this service (resets daily)
